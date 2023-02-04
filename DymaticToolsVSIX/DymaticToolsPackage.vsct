@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable language="en-us" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+
+    <Include href="KnownImageIds.vsct" />
+
+    <Extern href="stdidcmd.h" />
+    <Extern href="vsshlids.h" />
+    <Extern href="VSDbgCmd.h" />
+    <Extern href="VsDebugGuids.h" />
+
+    <Commands package="guidDymaticToolsPackage">
+
+        <Menus>
+          <Menu guid="guidDymaticToolsPackageCmdSet" id="DymaticMainMenu" priority="0x700" type="Menu">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
+            <Strings>
+              <ButtonText>Dymatic</ButtonText>
+            </Strings>
+          </Menu>
+        </Menus>
+      
+        <Groups>
+            <Group guid="guidDymaticToolsPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+                <Parent guid="guidDymaticToolsPackageCmdSet" id="DymaticMainMenu" />
+            </Group>
+        </Groups>
+
+        <Buttons>
+            <Button guid="guidDymaticToolsPackageCmdSet" id="AttachDymaticEditorCommandId" priority="0x0100" type="Button">
+                <Parent guid="guidDymaticToolsPackageCmdSet" id="MyMenuGroup" />
+                <Icon guid="DymaticLogo" id="bmpDymaticLogo"/>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <Strings>
+                    <ButtonText>Attach to Dymatic Editor</ButtonText>
+                </Strings>
+            </Button>
+        </Buttons>
+
+        <Bitmaps>
+          <Bitmap guid="DymaticLogo" href="DymaticLogo.png" usedList="bmpDymaticLogo" />
+        </Bitmaps>
+      
+    </Commands>
+
+    <KeyBindings>
+        <KeyBinding guid="guidDymaticToolsPackageCmdSet" id="AttachDymaticEditorCommandId" editor="guidVSStd97" key1="VK_F7" mod1="Control Shift" />
+    </KeyBindings>
+    
+    <VisibilityConstraints>
+        <VisibilityItem guid="guidDymaticToolsPackageCmdSet" id="AttachDymaticEditorCommandId" context="guidUIContextHasCSProject" />
+    </VisibilityConstraints>
+
+    <Symbols>
+        <GuidSymbol name="guidDymaticToolsPackage" value="{c7a2ebd8-63d8-4332-b696-67ca11f7f971}" />
+        <GuidSymbol name="guidUIContextHasCSProject" value="{df4efbdd-f234-4d5c-a753-4b50e0837327}" />
+
+        <GuidSymbol value="{7ccae1a8-81a9-4346-aaa2-8cad5e772749}" name="guidDymaticToolsPackageCmdSet">
+            <IDSymbol value="123" name="DymaticMainMenu" />
+            <IDSymbol value="4128" name="MyMenuGroup" />
+            <IDSymbol value="256" name="AttachDymaticEditorCommandId" />
+        </GuidSymbol>
+
+        <GuidSymbol name="DymaticLogo" value="{5ca12b33-80ec-4df5-8748-79555892060d}">
+          <IDSymbol name="bmpDymaticLogo" value="1" />
+        </GuidSymbol>
+    </Symbols>
+</CommandTable>

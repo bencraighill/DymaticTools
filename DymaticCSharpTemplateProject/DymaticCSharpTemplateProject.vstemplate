@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Dymatic Entity Script</Name>
+    <Description>An empty C# script that inherits from Dymatic's Entity class</Description>
+    <Icon>DymaticCSharpTemplateProject.ico</Icon>
+    <TemplateID>ffa4a5df-2e25-4234-9bf0-0cdea8d75db6</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Dymatic</ProjectSubType>
+    <LanguageTag>CSharp</LanguageTag>
+    <RequiredFrameworkVersion>4.7.2</RequiredFrameworkVersion>
+    <MaxFrameworkVersion>4.7.2</MaxFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Entity.cs</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true">Entity.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
